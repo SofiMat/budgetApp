@@ -155,7 +155,7 @@ var UIController = (function() {
             numSplit = num.split('.');
             int = numSplit[0];
             dec = numSplit[1];
-            if(int.length>3){
+            if(int.length>3 && isNaN(int)){
                 int = int.substr(0, int.length-3) + ',' + int.substr(int.lenght-3, 3);
             }
             return (type === 'exp'? sign = '-': sign='+') + ' ' + int + '.' + dec;
